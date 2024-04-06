@@ -9,6 +9,7 @@ from django.contrib.auth.models import User
 from .models import *
 
 # Define a view function for the home page
+@login_required
 def home(request):
 	return render(request, 'home.html')
 
